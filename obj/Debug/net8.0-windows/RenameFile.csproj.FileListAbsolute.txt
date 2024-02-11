@@ -14,3 +14,4 @@ C:\Devs\RenameFile\obj\Debug\net8.0-windows\refint\RenameFile.dll
 C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.pdb
 C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.genruntimeconfig.cache
 C:\Devs\RenameFile\obj\Debug\net8.0-windows\ref\RenameFile.dll
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.sourcelink.json

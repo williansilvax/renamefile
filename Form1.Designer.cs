@@ -43,7 +43,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(89, 57);
+            label1.Location = new Point(12, 6);
             label1.Name = "label1";
             label1.Size = new Size(57, 13);
             label1.TabIndex = 0;
@@ -51,14 +51,14 @@
             // 
             // txtDiretorio
             // 
-            txtDiretorio.Location = new Point(89, 72);
+            txtDiretorio.Location = new Point(12, 21);
             txtDiretorio.Name = "txtDiretorio";
             txtDiretorio.Size = new Size(491, 21);
             txtDiretorio.TabIndex = 1;
             // 
             // btnSelecionar
             // 
-            btnSelecionar.Location = new Point(586, 71);
+            btnSelecionar.Location = new Point(509, 20);
             btnSelecionar.Name = "btnSelecionar";
             btnSelecionar.Size = new Size(81, 21);
             btnSelecionar.TabIndex = 2;
@@ -68,9 +68,9 @@
             // 
             // btnRenomear
             // 
-            btnRenomear.Location = new Point(251, 100);
+            btnRenomear.Location = new Point(174, 55);
             btnRenomear.Name = "btnRenomear";
-            btnRenomear.Size = new Size(116, 42);
+            btnRenomear.Size = new Size(184, 30);
             btnRenomear.TabIndex = 3;
             btnRenomear.Text = "Renomear Arquivos";
             btnRenomear.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(89, 96);
+            label2.Location = new Point(12, 45);
             label2.Name = "label2";
             label2.Size = new Size(90, 13);
             label2.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // txtPseudoNome
             // 
-            txtPseudoNome.Location = new Point(89, 112);
+            txtPseudoNome.Location = new Point(12, 61);
             txtPseudoNome.Name = "txtPseudoNome";
             txtPseudoNome.Size = new Size(156, 21);
             txtPseudoNome.TabIndex = 5;
@@ -96,15 +96,15 @@
             // 
             lstArquivos.FormattingEnabled = true;
             lstArquivos.ItemHeight = 13;
-            lstArquivos.Location = new Point(89, 152);
+            lstArquivos.Location = new Point(12, 118);
             lstArquivos.Name = "lstArquivos";
-            lstArquivos.Size = new Size(416, 134);
+            lstArquivos.Size = new Size(416, 394);
             lstArquivos.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(89, 136);
+            label3.Location = new Point(12, 102);
             label3.Name = "label3";
             label3.Size = new Size(57, 13);
             label3.TabIndex = 7;
@@ -113,7 +113,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(89, 289);
+            label4.Location = new Point(434, 102);
             label4.Name = "label4";
             label4.Size = new Size(132, 13);
             label4.TabIndex = 8;
@@ -123,16 +123,16 @@
             // 
             lstArquivosRenomeados.FormattingEnabled = true;
             lstArquivosRenomeados.ItemHeight = 13;
-            lstArquivosRenomeados.Location = new Point(89, 305);
+            lstArquivosRenomeados.Location = new Point(434, 118);
             lstArquivosRenomeados.Name = "lstArquivosRenomeados";
-            lstArquivosRenomeados.Size = new Size(416, 147);
+            lstArquivosRenomeados.Size = new Size(416, 394);
             lstArquivosRenomeados.TabIndex = 9;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 527);
+            ClientSize = new Size(865, 527);
             Controls.Add(lstArquivosRenomeados);
             Controls.Add(label4);
             Controls.Add(label3);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RenameFile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b9754d38c2a8a26a129a2053f893267f04e6705")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef2555acb96ab6af3e6a7b8233c2636405a00679")]
 [assembly: System.Reflection.AssemblyProductAttribute("RenameFile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RenameFile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

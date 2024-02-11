@@ -13,6 +13,8 @@ namespace RenameFile
             if (diretorio != null)
             {
                 DirectoryInfo dinfo = new(diretorio);
+                this.Text = dinfo.Name;
+
                 lstArquivos.Items.Clear();
 
                 foreach (FileInfo fi in dinfo.GetFiles())
@@ -47,7 +49,6 @@ namespace RenameFile
         private void btnRenomear_Click(object sender, EventArgs e)
         {
             DirectoryInfo dinfo = new(Diretorio);
-            MessageBox.Show(dinfo.Name);
 
             lstArquivosRenomeados.Items.Clear();
             try
