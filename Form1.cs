@@ -39,10 +39,7 @@ namespace RenameFile
             {
                 Diretorio = txtDiretorio.Text;
             }
-
             txtDiretorio.Text = Diretorio;
-
-
             ListarArquivosDoDiretorio(Diretorio);
         }
 
