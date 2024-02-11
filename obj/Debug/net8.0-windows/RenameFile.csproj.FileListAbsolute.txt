@@ -1,0 +1,16 @@
+C:\Devs\RenameFile\bin\Debug\net8.0-windows\RenameFile.exe
+C:\Devs\RenameFile\bin\Debug\net8.0-windows\RenameFile.deps.json
+C:\Devs\RenameFile\bin\Debug\net8.0-windows\RenameFile.runtimeconfig.json
+C:\Devs\RenameFile\bin\Debug\net8.0-windows\RenameFile.dll
+C:\Devs\RenameFile\bin\Debug\net8.0-windows\RenameFile.pdb
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.Form1.resources
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.csproj.GenerateResource.cache
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.AssemblyInfoInputs.cache
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.AssemblyInfo.cs
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.csproj.CoreCompileInputs.cache
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.dll
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\refint\RenameFile.dll
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.pdb
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\RenameFile.genruntimeconfig.cache
+C:\Devs\RenameFile\obj\Debug\net8.0-windows\ref\RenameFile.dll
