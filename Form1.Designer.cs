@@ -35,9 +35,15 @@
             label2 = new Label();
             txtPseudoNome = new TextBox();
             lstArquivos = new ListBox();
-            label3 = new Label();
-            label4 = new Label();
             lstArquivosRenomeados = new ListBox();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            groupBox3 = new GroupBox();
+            rbTodos = new RadioButton();
+            rbUnico = new RadioButton();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -68,12 +74,13 @@
             // 
             // btnRenomear
             // 
-            btnRenomear.Location = new Point(174, 55);
+            btnRenomear.BackColor = Color.FromArgb(192, 255, 255);
+            btnRenomear.Location = new Point(201, 88);
             btnRenomear.Name = "btnRenomear";
-            btnRenomear.Size = new Size(184, 30);
+            btnRenomear.Size = new Size(96, 36);
             btnRenomear.TabIndex = 3;
             btnRenomear.Text = "Renomear Arquivos";
-            btnRenomear.UseVisualStyleBackColor = true;
+            btnRenomear.UseVisualStyleBackColor = false;
             btnRenomear.Click += btnRenomear_Click;
             // 
             // label2
@@ -94,49 +101,86 @@
             // 
             // lstArquivos
             // 
+            lstArquivos.Dock = DockStyle.Fill;
             lstArquivos.FormattingEnabled = true;
             lstArquivos.ItemHeight = 13;
-            lstArquivos.Location = new Point(12, 118);
+            lstArquivos.Location = new Point(3, 17);
             lstArquivos.Name = "lstArquivos";
-            lstArquivos.Size = new Size(416, 394);
+            lstArquivos.Size = new Size(394, 358);
             lstArquivos.TabIndex = 6;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 102);
-            label3.Name = "label3";
-            label3.Size = new Size(57, 13);
-            label3.TabIndex = 7;
-            label3.Text = "Arquivos";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(434, 102);
-            label4.Name = "label4";
-            label4.Size = new Size(132, 13);
-            label4.TabIndex = 8;
-            label4.Text = "Arquivos renomeados";
             // 
             // lstArquivosRenomeados
             // 
+            lstArquivosRenomeados.Dock = DockStyle.Fill;
             lstArquivosRenomeados.FormattingEnabled = true;
             lstArquivosRenomeados.ItemHeight = 13;
-            lstArquivosRenomeados.Location = new Point(434, 118);
+            lstArquivosRenomeados.Location = new Point(3, 17);
             lstArquivosRenomeados.Name = "lstArquivosRenomeados";
-            lstArquivosRenomeados.Size = new Size(416, 394);
+            lstArquivosRenomeados.Size = new Size(394, 358);
             lstArquivosRenomeados.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(lstArquivosRenomeados);
+            groupBox1.Location = new Point(418, 130);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(400, 378);
+            groupBox1.TabIndex = 10;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Arquivos renomeados";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(lstArquivos);
+            groupBox2.Location = new Point(12, 130);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(400, 378);
+            groupBox2.TabIndex = 11;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Arquivos do diretório";
+            // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = Color.Transparent;
+            groupBox3.Controls.Add(rbTodos);
+            groupBox3.Controls.Add(rbUnico);
+            groupBox3.Location = new Point(12, 88);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(183, 36);
+            groupBox3.TabIndex = 12;
+            groupBox3.TabStop = false;
+            // 
+            // rbTodos
+            // 
+            rbTodos.AutoSize = true;
+            rbTodos.Checked = true;
+            rbTodos.Location = new Point(115, 10);
+            rbTodos.Name = "rbTodos";
+            rbTodos.Size = new Size(58, 17);
+            rbTodos.TabIndex = 1;
+            rbTodos.TabStop = true;
+            rbTodos.Text = "Todos";
+            rbTodos.UseVisualStyleBackColor = true;
+            // 
+            // rbUnico
+            // 
+            rbUnico.AutoSize = true;
+            rbUnico.Location = new Point(6, 10);
+            rbUnico.Name = "rbUnico";
+            rbUnico.Size = new Size(103, 17);
+            rbUnico.TabIndex = 0;
+            rbUnico.Text = "Único arquivo";
+            rbUnico.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(865, 527);
-            Controls.Add(lstArquivosRenomeados);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(lstArquivos);
+            BackColor = SystemColors.GradientInactiveCaption;
+            ClientSize = new Size(828, 517);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Controls.Add(txtPseudoNome);
             Controls.Add(label2);
             Controls.Add(btnRenomear);
@@ -145,7 +189,11 @@
             Controls.Add(label1);
             Font = new Font("Verdana", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Rename Files";
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -159,8 +207,11 @@
         private Label label2;
         private TextBox txtPseudoNome;
         private ListBox lstArquivos;
-        private Label label3;
-        private Label label4;
         private ListBox lstArquivosRenomeados;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private GroupBox groupBox3;
+        private RadioButton rbTodos;
+        private RadioButton rbUnico;
     }
 }

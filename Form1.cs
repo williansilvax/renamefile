@@ -13,7 +13,8 @@ namespace RenameFile
             if (diretorio != null)
             {
                 DirectoryInfo dinfo = new(diretorio);
-                this.Text = dinfo.Name;
+                this.Text = " ";
+                this.Text = this.Text + " - " + dinfo.Name;
 
                 lstArquivos.Items.Clear();
 
@@ -43,36 +44,80 @@ namespace RenameFile
             ListarArquivosDoDiretorio(Diretorio);
         }
 
+        private void RenomearTodosArquivos(string? diretorio)
+        {
+            if (diretorio != null)
+            {
+                DirectoryInfo dinfo = new(diretorio);
+
+                lstArquivosRenomeados.Items.Clear();
+                try
+                {
+                    foreach (FileInfo fi in dinfo.GetFiles())
+                    {
+                        string nome = Path.GetFileName(fi.Name);
+                        string? novoNome = null;
+                        if (!txtPseudoNome.Text.Equals(""))
+                        {
+                            novoNome = txtPseudoNome.Text + "_" + nome;
+                        }
+                        else
+                        {
+                            Random randNum = new Random();
+                            novoNome = randNum.Next().ToString() + " _" + nome;
+                        }
+                        string novoCaminho = Path.Combine(diretorio, novoNome);
+                        File.Move(fi.FullName, novoCaminho);
+                        lstArquivosRenomeados.Items.Add(novoNome);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
+
         private void btnRenomear_Click(object sender, EventArgs e)
         {
-            DirectoryInfo dinfo = new(Diretorio);
-
-            lstArquivosRenomeados.Items.Clear();
             try
             {
-                foreach (FileInfo fi in dinfo.GetFiles())
+                if (rbTodos.Checked)
                 {
-                    string nome = Path.GetFileName(fi.Name);
-                    string? novoNome = null;
-                    if (!txtPseudoNome.Text.Equals(""))
-                    {
-                        novoNome = txtPseudoNome.Text + "_" + nome;
-                    }
-                    else
-                    {
-                        Random randNum = new Random();
-                        novoNome = randNum.Next().ToString() + " _" + nome;
-                    }
-                    string novoCaminho = Path.Combine(Diretorio, novoNome);
-                    File.Move(fi.FullName, novoCaminho);
-                    lstArquivosRenomeados.Items.Add(novoNome);
+                    RenomearTodosArquivos(Diretorio);
                 }
-                MessageBox.Show("Arquivos renomeados com sucesso!");
-            }
-            catch (Exception ex)
+                else if (rbUnico.Checked)
+                {
+                    RenomearUnicoArquivo(Diretorio);
+                }
+
+                MessageBox.Show("Operação realizada com sucess","Renomear",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void RenomearUnicoArquivo(string diretorio)
+        {
+            string? arquivoSelecionado = lstArquivos.Items[lstArquivos.SelectedIndex].ToString();
+            string? novoNome = null;
+
+            if (!txtPseudoNome.Text.Equals(""))
+            {
+                novoNome = txtPseudoNome.Text + "_" + arquivoSelecionado;
+            }
+            else
+            {
+                Random randNum = new Random();
+                novoNome = randNum.Next().ToString() + " _" + arquivoSelecionado;
+            }
+
+            string novoCaminho = Path.Combine(diretorio, novoNome);
+            File.Move(Path.Combine(diretorio,arquivoSelecionado), novoCaminho);
+            lstArquivosRenomeados.Items.Add(novoNome);
+
         }
     }
 }
